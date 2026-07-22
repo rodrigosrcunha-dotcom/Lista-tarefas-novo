@@ -15,9 +15,7 @@ describe('Componente: ListaTarefas e Interações', () => {
 
     render(
       <ListaTarefas 
-        tarefas={tarefasIniciais} 
-        onToggle={handleToggle} 
-        onExcluir={handleExcluir} 
+        tarefasIniciais={tarefasIniciais} 
       />
     );
 
