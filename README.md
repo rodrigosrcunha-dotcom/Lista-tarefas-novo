@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gerenciador de Tarefas - Next.js 16
 
-## Getting Started
+Aplicação de lista de tarefas desenvolvida com Next.js (App Router), TypeScript, Tailwind CSS e Jest para testes unitários e de componentes.
 
-First, run the development server:
+## 🛠️ Tecnologias Utilizadas
+
+- **Framework:** Next.js 16 (App Router)
+- **Linguagem:** TypeScript
+- **Estilização:** Tailwind CSS
+- **Testes:** Jest e React Testing Library
+
+## 📋 Pré-requisitos
+
+- Node.js (versão 18.x ou superior)
+- npm (gerenciador de pacotes)
+
+## 🔧 Instalação
+
+1. Clone o repositório:
+```bash
+git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
+```
+
+2. Acesse a pasta do projeto:
+```bash
+cd SEU_REPOSITORIO
+```
+
+3. Instale as dependências:
+```bash
+npm install
+```
+
+## 🚀 Executando a Aplicação
+
+Para iniciar o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 Executando os Testes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A suíte de testes é dividida por responsabilidades unitárias:
 
-## Learn More
+- **Hook personalizado (`useContadorDeTarefas`):** Valida a lógica de contagem total e de tarefas concluídas via `renderHook`.
+- **Componente `NovaTarefa`:** Valida a digitação no input, o evento de submissão do formulário e a limpeza do campo.
+- **Componente `ListaTarefas`:** Valida a renderização dos itens, marcação de conclusão e remoção.
 
-To learn more about Next.js, take a look at the following resources:
+Para rodar os testes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm test
+```
